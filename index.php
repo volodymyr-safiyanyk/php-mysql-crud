@@ -45,6 +45,10 @@
           $query = "SELECT * FROM task";
           $result_tasks = mysqli_query($conn, $query);    
 
+          if (!$result_tasks) {
+            die(mysqli_error($conn));
+          }
+
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
             <td><?php echo $row['title']; ?></td>

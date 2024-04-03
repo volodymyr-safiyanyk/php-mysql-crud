@@ -1,6 +1,4 @@
-CREATE DATABASE php_mysql_crud;
-
-use php_mysql_crud;
+use mydatabase;
 
 CREATE TABLE task(
   id INT(11) PRIMARY KEY AUTO_INCREMENT,
@@ -8,5 +6,3 @@ CREATE TABLE task(
   description TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-DESCRIBE task;
